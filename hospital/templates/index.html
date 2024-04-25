@@ -1,0 +1,27 @@
+{% include 'base.html' %}
+{% load static %}
+{% include 'navigation.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title text-center" style="font-family: 'Comic Sans MS', cursive;">Welcome to Your Admin Dashboard!</h1>
+          <p class="lead text-center" style="font-family: 'Comic Sans MS', cursive;">Where magic happens... 🚀</p>
+          <p class="text-center">You're now in control. Go ahead, sprinkle some stardust!</p>
+          <p class="text-center">Here are a few things you can do:</p>
+          <ul class="list-unstyled text-center">
+            <li>✨ View Doctors and Add Doctors</li>
+            <li>✨ View patients and add patients</li>
+          </ul>
+          <p class="text-center">Let your imagination soar!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+{% include 'footer.html' %}

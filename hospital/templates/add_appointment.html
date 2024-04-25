@@ -1,0 +1,31 @@
+{% include 'base.html' %}
+{% include 'navigation.html' %}
+{% block content %}
+{% if error == "No" %}
+<script>
+    alert('record saved successfully');
+    window.location = "{% url 'view_appointment' %}";
+</script>
+{% elif error == "Yes" %}
+<script>
+    alert('invalid credentials');
+</script>
+{% endif %}
+<div class="container">
+    <h2 class="text-center">Add Doctor</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label>Doctor Name</label>
+        <input type="text" class="form-control" name="dname">
+        <label>Patient Name</label>
+        <input type="text" class="form-control" name="pname">
+        <label>Date</label>
+        <input type="date" class="form-control" name="date">
+        <label>Time</label>
+        <input type="time" class="form-control" name="time">
+        <input type="submit" value="submit" class="form-control btn btn-primary">
+    </form>
+</div>
+
+{% endblock content %}
+{% include 'footer.html' %}

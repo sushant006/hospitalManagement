@@ -1,0 +1,82 @@
+{% include 'base.html' %}
+{% load static %}
+{% include 'navigation.html' %}
+
+{% block content %}
+<style>
+    body {
+        background-image: url('{% static "/images/hospImage.png" %}');
+        /* Other background styles */
+        background-color: moccasin;
+    }
+</style>
+<div class="container">
+    <header>
+        <h1 style = "text-align: center;">Welcome to Our Hospital</h1>
+        <p>Welcome to our hospital management system. We strive to provide the best healthcare services to our patients.</p>
+    </header>
+
+    <section id="departments">
+        <h2 id="dept">Departments</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Department 1</h3>
+                <p>Neurosurgery</p>
+            </div>
+            <div class="card">
+                <h3>Department 2</h3>
+                <p>Orthopaedic</p>
+            </div>
+            <div class="card">
+                <h3>Department 3</h3>
+                <p>cardiology</p>
+            </div>
+            <!-- Add more departments as needed -->
+        </div>
+    </section>
+    <section id="doctors">
+        <h2 class="section-title">Our Doctors</h2>
+        <div class="doctors-container">
+            <div class="doctor">
+                <img src="{% static '/images/doctor.jpg' %}" alt="Doctor 1">
+                <h3>Dr. Sushant</h3>
+                <p>Department: Department 1</p>
+            </div>
+            <div class="doctor">
+                <img src="{% static '/images/doctor.jpg' %}" alt="Doctor 2">
+                <h3>Dr. Pawan Singh</h3>
+                <p>Department: Department 2</p>
+            </div>
+            <div class="doctor">
+                <img src="{% static '/images/doctor.jpg' %}" alt="Doctor 2">
+                <h3>Dr. Virat Kohli</h3>
+                <p>Department: Department 2</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-container">
+            <div class="service">
+                <h3>Emergency Care</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia velit vitae velit rhoncus malesuada.</p>
+            </div>
+            <div class="service">
+                <h3>General Surgery</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia velit vitae velit rhoncus malesuada.</p>
+            </div>
+            <div class="service">
+                <h3>Nursing</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia velit vitae velit rhoncus malesuada.</p>
+            </div>
+            <div class="service">
+                <h3>Diagnostic Services</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia velit vitae velit rhoncus malesuada.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock content %}
+{% include 'footer.html'%}
